@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		81944EF92CB55EEA002E5A59 /* ebby-microjournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebby-microjournal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81944EF92CB55EEA002E5A59 /* Ebby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ebby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		81944F092CB55EEB002E5A59 /* Exceptions for "ebby-microjournal" folder in "ebby-microjournal" target */ = {
+		81944F092CB55EEB002E5A59 /* Exceptions for "ebby-microjournal" folder in "Ebby" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 81944EF82CB55EEA002E5A59 /* ebby-microjournal */;
+			target = 81944EF82CB55EEA002E5A59 /* Ebby */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -24,7 +24,7 @@
 		81944EFB2CB55EEA002E5A59 /* ebby-microjournal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				81944F092CB55EEB002E5A59 /* Exceptions for "ebby-microjournal" folder in "ebby-microjournal" target */,
+				81944F092CB55EEB002E5A59 /* Exceptions for "ebby-microjournal" folder in "Ebby" target */,
 			);
 			path = "ebby-microjournal";
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 		81944EFA2CB55EEA002E5A59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81944EF92CB55EEA002E5A59 /* ebby-microjournal.app */,
+				81944EF92CB55EEA002E5A59 /* Ebby.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81944EF82CB55EEA002E5A59 /* ebby-microjournal */ = {
+		81944EF82CB55EEA002E5A59 /* Ebby */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81944F0A2CB55EEB002E5A59 /* Build configuration list for PBXNativeTarget "ebby-microjournal" */;
+			buildConfigurationList = 81944F0A2CB55EEB002E5A59 /* Build configuration list for PBXNativeTarget "Ebby" */;
 			buildPhases = (
 				81944EF52CB55EEA002E5A59 /* Sources */,
 				81944EF62CB55EEA002E5A59 /* Frameworks */,
@@ -76,11 +76,11 @@
 			fileSystemSynchronizedGroups = (
 				81944EFB2CB55EEA002E5A59 /* ebby-microjournal */,
 			);
-			name = "ebby-microjournal";
+			name = Ebby;
 			packageProductDependencies = (
 			);
 			productName = "ebby-microjournal";
-			productReference = 81944EF92CB55EEA002E5A59 /* ebby-microjournal.app */;
+			productReference = 81944EF92CB55EEA002E5A59 /* Ebby.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81944EF82CB55EEA002E5A59 /* ebby-microjournal */,
+				81944EF82CB55EEA002E5A59 /* Ebby */,
 			);
 		};
 /* End PBXProject section */
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81944F0A2CB55EEB002E5A59 /* Build configuration list for PBXNativeTarget "ebby-microjournal" */ = {
+		81944F0A2CB55EEB002E5A59 /* Build configuration list for PBXNativeTarget "Ebby" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81944F0B2CB55EEB002E5A59 /* Debug */,

@@ -12,7 +12,8 @@ import SwiftData
 struct ebby_microjournalApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Notes.self,
+            Eintrag.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
