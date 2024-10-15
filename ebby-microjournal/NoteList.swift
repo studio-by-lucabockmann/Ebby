@@ -20,20 +20,20 @@ struct NoteList: View {
     var body: some View {
         VStack {
             Text(note.title)
-                .font(Font.custom("HankenGrotesk-Bold", fixedSize: 20))
-                .foregroundStyle(.black)
+                .font(.system(size: 16))
+                .bold()
+                .foregroundStyle(Color("secondary"))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.leading, .trailing],16)
             Text("letztes Update: \(note.lastUpdate)")
-                .font(Font.custom("HankenGrotesk-Medium", fixedSize: 16))
+                .font(.system(size: 16))
                 .padding([.top], 2)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .foregroundStyle(.black)
+                .foregroundStyle(Color("secondary"))
                 .padding([.leading, .trailing],16)
         }
         .background(displayBackgroundColour(note: note.title))
-        .padding([.top], 16)
-        .padding([.bottom], 36)
+        .padding([.top, .bottom], 16)
         .overlay {
             NavigationLink(destination: {
                 NoteDetail(note: note)

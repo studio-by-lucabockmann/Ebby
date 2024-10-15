@@ -3,10 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>UIAppFonts</key>
-	<array>
-		<string>HankenGrotesk-Medium.ttf</string>
-		<string>HankenGrotesk-Bold.ttf</string>
-	</array>
+	<array/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

@@ -13,31 +13,32 @@ struct NoteDetail: View {
     var body: some View {
         
         NavigationStack {
-            List {
-                ForEach(note.eintraege) { eintrag in
-                    VStack {
-                        
-                        Text(eintrag.time)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(Font.custom("HankenGrotesk-Bold", size: 16))
-                            .padding([.bottom], 2)
-                        Text(eintrag.text)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(Font.custom("HankenGrotesk-Medium", size: 16))
-                            .padding([.bottom], 8)
+            ZStack {
+                Color("light-gray").edgesIgnoringSafeArea(.all)
+                
+                List {
+                    ForEach(note.eintraege) { eintrag in
+                        VStack {
+
+                            Text(eintrag.time)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .font(.system(size: 16))
+                                .bold()
+                                .padding([.bottom], 2)
+                            Text(eintrag.text)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .font(.system(size: 16))
+                                .padding([.bottom], 8)
+                        }
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .listRowBackground(Color("light-gray"))
+                    .listRowSeparator(.hidden)
+                    .padding([.top], 20)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .listRowSeparator(.hidden)
-                .padding([.top], 20)
             }
-            .listRowInsets(EdgeInsets())
         }
         .listStyle(.plain)
         .navigationTitle(note.title)
         .navigationBarTitleDisplayMode(.large)
-        .scrollContentBackground(.hidden)
-        
     }
 }

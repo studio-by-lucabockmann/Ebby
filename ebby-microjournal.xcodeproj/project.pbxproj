@@ -6,7 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8174E9ED2CBEB72700E9FCD5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8174E9DA2CBEB72600E9FCD5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		81944EF92CB55EEA002E5A59 /* Ebby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ebby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,10 +56,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8174E9D72CBEB72600E9FCD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8174E9DA2CBEB72600E9FCD5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81944EF02CB55EEA002E5A59 = {
 			isa = PBXGroup;
 			children = (
 				81944EFB2CB55EEA002E5A59 /* ebby-microjournal */,
+				8174E9D72CBEB72600E9FCD5 /* Frameworks */,
 				81944EFA2CB55EEA002E5A59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +91,7 @@
 				81944EF52CB55EEA002E5A59 /* Sources */,
 				81944EF62CB55EEA002E5A59 /* Frameworks */,
 				81944EF72CB55EEA002E5A59 /* Resources */,
+				8174E9ED2CBEB72700E9FCD5 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -147,6 +171,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ebby-microjournal/Preview Content\"";
+				DEVELOPMENT_TEAM = 95XVBY6F6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ebby-microjournal/Info.plist";
@@ -177,6 +202,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ebby-microjournal/Preview Content\"";
+				DEVELOPMENT_TEAM = 95XVBY6F6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ebby-microjournal/Info.plist";

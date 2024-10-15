@@ -17,51 +17,73 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                if notes.isEmpty {
-                    Text("Dein Journal ist noch leer. Klicke einfach auf das “+” um zu starten")
-                        .listRowSeparator(.hidden)
-                        .padding([.top], 12)
-                }
+            ZStack {
+                Color("light-gray").edgesIgnoringSafeArea(.all)
+                
+                List {
+                    if notes.isEmpty {
+                        Text("Dein Journal ist noch leer. Klicke einfach auf das “+” um zu starten")
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color("light-gray"))
+                            .padding([.top], 12)
+                            .opacity(0.4)
+                            
+                    }
 
-                ForEach(notes) { note in
-                    NoteList(note: note)
+                    ForEach(notes) { note in
+                        NoteList(note: note)
+                    }
+                    .onDelete(perform: deleteItems)
+                    .cornerRadius(10)
+                    .padding([.top], 20)
+                    .listRowBackground(Color("light-gray"))
                 }
-                .onDelete(perform: deleteItems)
-                .cornerRadius(10)
+                .listStyle(.plain)
+                .navigationTitle("Alle Einträge")
+                .toolbar {
+                    ToolbarItem(content: {
+                        NavigationLink(destination: {
+                            InformationDetail()
+                        },
+                        
+                        label: {
+                            Image("icon-info")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, alignment: .trailing)
+                        })
+                    })
+                }
+                .navigationBarTitleDisplayMode(.large)
+                .background(Color("light-gray"))
             }
-            .listStyle(.plain)
-            .navigationTitle("Alle Einträge")
-            .navigationBarTitleDisplayMode(.large)
         }
-        .tint(Color("primary"))
         .listRowInsets(EdgeInsets())
-        .scrollContentBackground(.hidden)
-        .padding(0)
-
+        .tint(Color("primary"))
+            
         
         /*  ---- Notiz erstllen ----
             Hier
             ----------------------
          */
-        VStack {
+        VStack(spacing: 0) {
             Button(action: {
                 self.isSheetOpen.toggle()
                 createNote()
             }, label: {
                 Image("icon-plus")
-                    .frame(width: 25, height: 25)
-                    .padding(12)
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .padding(16)
                     .background(Color("primary"))
                     .cornerRadius(50)
             })
             .sheet(isPresented: $isSheetOpen) { CreateNoteView(note: notes.last!) }
-            
-            
         }
         .frame(maxWidth: .infinity, alignment: .trailing)
         .padding([.leading, .trailing], 20)
-        .background(.white)
+        .background(Color("light-gray"))
+        .padding(.top, -10)
     }
 
     private func deleteItems(offsets: IndexSet) {

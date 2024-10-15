@@ -23,22 +23,23 @@ struct CreateNoteView: View {
         NavigationStack {
             Form {
                 Text("\(time)  am \(note.title)")
-                    .font(Font.custom("HankenGrotesk-Bold", size: 16))
+                    .font(.system(size: 16))
+                    .bold()
+                    .listRowBackground(Color.clear)
                 
                 TextField("Wie geht es dir gerade?", text: $text,  axis: .vertical)
                     .focused($keyboardFocused)
                     .padding(0)
+                    .listRowBackground(Color.clear)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             keyboardFocused = true
                         }
                     }
-                
-                                
-                
             }
             .presentationDetents([.medium, .large])
             .presentationDragIndicator(.visible)
+            
             
             VStack {
                 Button(action: {
@@ -52,14 +53,15 @@ struct CreateNoteView: View {
                     dismiss()
                 }, label: {
                     Image("icon-arrow-up")
-                        .frame(width: 25, height: 25)
-                        .padding(12)
+                        .frame(width: 35, height: 35)
+                        .padding(16)
                         .background(Color("primary"))
                         .cornerRadius(50)
                 })
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
             .padding([.leading, .trailing], 20)
+            .padding(.bottom, 16)
         }
         .scrollContentBackground(.hidden)
         

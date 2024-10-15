@@ -12,11 +12,9 @@ import SwiftData
 final class Eintrag {
     var time: String
     var text: String
-//    var createdAt: Date
     
     init(time: String, text: String) {
         self.time = time
         self.text = text
-//        self.createdAt = Date()
     }
 }
