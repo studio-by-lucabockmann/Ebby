@@ -10,8 +10,8 @@ import SwiftUI
 struct NoteDetail: View {
     @Bindable var note: Notes
     
+    
     var body: some View {
-        
         NavigationStack {
             ZStack {
                 Color("light-gray").edgesIgnoringSafeArea(.all)
@@ -19,7 +19,6 @@ struct NoteDetail: View {
                 List {
                     ForEach(note.eintraege) { eintrag in
                         VStack {
-
                             Text(eintrag.time)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.system(size: 16))

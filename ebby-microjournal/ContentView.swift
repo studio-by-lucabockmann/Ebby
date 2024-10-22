@@ -31,14 +31,15 @@ struct ContentView: View {
                     }
 
                     ForEach(notes) { note in
-                        NoteList(note: note)
+                        NoteListing(note: note)
                     }
                     .onDelete(perform: deleteItems)
                     .cornerRadius(10)
-                    .padding([.top], 20)
                     .listRowBackground(Color("light-gray"))
+                    .listSectionSpacing(0)
                 }
                 .listStyle(.plain)
+                .padding(.top, 20)
                 .navigationTitle("Alle Einträge")
                 .toolbar {
                     ToolbarItem(content: {
@@ -62,7 +63,7 @@ struct ContentView: View {
         .tint(Color("primary"))
             
         
-        /*  ---- Notiz erstllen ----
+        /*  ---- Notiz erstellen ----
             Hier
             ----------------------
          */
@@ -78,7 +79,7 @@ struct ContentView: View {
                     .background(Color("primary"))
                     .cornerRadius(50)
             })
-            .sheet(isPresented: $isSheetOpen) { CreateNoteView(note: notes.last!) }
+            .sheet(isPresented: $isSheetOpen) { CreateNoteView(note: notes.first!) }
         }
         .frame(maxWidth: .infinity, alignment: .trailing)
         .padding([.leading, .trailing], 20)
@@ -97,7 +98,7 @@ struct ContentView: View {
     private func createNote() {
         
         let note = Notes(title: Date().formatted(date: .long, time: .omitted), lastUpdate: Date().formatted(date: .omitted, time: .shortened))
-        let timmedLastTitle = notes.last?.title.trimmingCharacters(in: .whitespacesAndNewlines) ?? "leer"
+        let timmedLastTitle = notes.first?.title.trimmingCharacters(in: .whitespacesAndNewlines) ?? "leer"
         let timmedNewTitle = note.title.trimmingCharacters(in: .whitespacesAndNewlines)
         
 
